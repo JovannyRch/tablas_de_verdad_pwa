@@ -7,7 +7,6 @@ export interface IScreenProps {
 }
 
 const Screen = (props: IScreenProps) => {
-  const { content } = props;
   const { expression } = useSelector((state: RootStateTable) => state.table);
   return <div className="display">{expression}</div>;
 };
