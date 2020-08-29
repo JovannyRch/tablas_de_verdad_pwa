@@ -10,6 +10,9 @@ export function SideLayer(props: IButtonsLayerProps) {
     <div className="buttons-layer">
       <Grid container spacing={1}>
         <Grid item xs={12}>
+          <ButtonVar color={true} name={"~"}></ButtonVar>
+        </Grid>
+        <Grid item xs={12}>
           <ButtonVar color={true} name={"¬"}></ButtonVar>
         </Grid>
         <Grid item xs={12}>

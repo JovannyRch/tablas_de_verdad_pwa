@@ -6,6 +6,7 @@ import DeleteIcon from "@material-ui/icons/Delete";
 import BackspaceIcon from "@material-ui/icons/Backspace";
 import { useDispatch } from "react-redux";
 import { clearExpression, removeLetter } from "../../store/actions";
+import { orange } from "@material-ui/core/colors";
 
 export interface IButtonsLayerProps {}
 
@@ -25,7 +26,7 @@ export function ButtonsLayer(props: IButtonsLayerProps) {
       <Grid container spacing={2}>
         <Grid item xs={3}>
           <ButtonVar color={true} handler={handleClear}>
-            <DeleteIcon />
+            <DeleteIcon style={{ color: orange[500] }} />
           </ButtonVar>
         </Grid>
         <Grid item xs={3}>
@@ -44,6 +45,37 @@ export function ButtonsLayer(props: IButtonsLayerProps) {
             <ButtonVar name={v} />
           </Grid>
         ))}
+        <Grid item xs={3}>
+          <ButtonVar name={"["} color={true} />
+        </Grid>
+        <Grid item xs={3}>
+          <ButtonVar name={"]"} color={true} />
+        </Grid>
+
+        <Grid item xs={3}>
+          <ButtonVar name={"⊕"} color={true} />
+        </Grid>
+        <Grid item xs={3}>
+          <ButtonVar name={"⊻"} color={true} />
+        </Grid>
+        <Grid item xs={3}>
+          <ButtonVar name={"⊼"} color={true} />
+        </Grid>
+        <Grid item xs={3}>
+          <ButtonVar name={"↓"} color={true} />
+        </Grid>
+        <Grid item xs={3}>
+          <ButtonVar name={"⇏"} color={true} />
+        </Grid>
+        <Grid item xs={3}>
+          <ButtonVar name={"⇍"} color={true} />
+        </Grid>
+        <Grid item xs={3}>
+          <ButtonVar name={"┲"} color={true} />
+        </Grid>
+        <Grid item xs={3}>
+          <ButtonVar name={"┹"} color={true} />
+        </Grid>
       </Grid>
     </div>
   );
