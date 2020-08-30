@@ -5,6 +5,7 @@ import {
   CLEAR_EXPRESION,
   ADD_LETTER,
   REMOVE_LETTER,
+  SWITCH_CASE,
 } from "./types";
 
 // TypeScript infers that this function is returning SendMessageAction
@@ -31,5 +32,11 @@ export function addLetter(letter: string): TableActionTypes {
 export function removeLetter(): TableActionTypes {
   return {
     type: REMOVE_LETTER,
+  };
+}
+
+export function switchCase(): TableActionTypes {
+  return {
+    type: SWITCH_CASE,
   };
 }

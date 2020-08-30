@@ -5,10 +5,12 @@ import {
   SET_EXPRESION,
   ADD_LETTER,
   REMOVE_LETTER,
+  SWITCH_CASE,
 } from "./types";
 
 const initialState: Table = {
   expression: "A+B",
+  inCapitalLetters: true,
 };
 
 export function tableReducer(
@@ -26,6 +28,11 @@ export function tableReducer(
       return {
         ...state,
         expression: state.expression.substring(0, state.expression.length - 1),
+      };
+    case SWITCH_CASE:
+      return {
+        ...state,
+        inCapitalLetters: !state.inCapitalLetters,
       };
     default:
       return state;
